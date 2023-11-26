@@ -1,15 +1,12 @@
-nums = [2, 7, 11, 15]
-target = 17
-def two_sum(target, nums):
-    a = 0
-    b = 0
-    for first in nums:
+nums = [2, 2, 7, 11, 15]
+target = 18
 
-        for second in nums:
-            if first + second == target:
-                print(first, second, target)
-                return [a, b]
-            b += 1
-        a += 1
+
+def two_sum(target, nums):
+    for first in range(len(nums)):
+        for second in range(first + 1, len(nums)):
+            if nums[first] + nums[second] == target:
+                return first, second
+
 
 print(two_sum(target, nums))
